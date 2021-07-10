@@ -1,0 +1,66 @@
+header {
+  background-color: red;
+  margin-top: -10px;
+  margin-right: -20px;
+  margin-left: -10px;
+  margin-bottom: 4%;
+  height: 50px;
+  position: sticky;
+  width: 120%;
+}
+
+h1 {
+  color: white;
+  padding: 10px;
+  font-family: a dripping marker;
+  margin: 0;
+}
+
+
+/* colonne di immagini */
+.colonne {
+display: flex;
+flex-flow: row nowrap;
+align-items: flex-start;
+margin-top: 10px;
+}
+
+/* singola fotografia */
+.fotogalleria{
+  max-width: 100%;
+  margin-bottom: 7%;
+}
+
+/* versione desktop */
+[class*="div-"] {
+  margin: 0.7%;
+}
+
+.div-1 {width: 20vw; display: inline-block;}
+.div-2 {width: 20vw; display: inline-block;}
+.div-3 {width: 20vw; display: inline-block;}
+.div-4 {width: 20vw; display: inline-block;}
+.div-5 {width: 20vw; display: inline-block;}
+.div-6 {width: 20vw; display: inline-block;}
+
+/* mobile */
+@media (max-width: 780px) {
+
+  [class*="div-"] {
+    margin: 0.7%;}
+
+
+    .colonne {
+    display: block;
+    margin-top: 10px;
+
+    }
+
+    .div-1 {width: 31%}
+    .div-2 {width: 31%}
+    .div-3 {width: 31%}
+    .div-4 {width: 31%}
+    .div-5 {width: 31%}
+    .div-6 {width: 31%}
+
+}
