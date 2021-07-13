@@ -1,0 +1,51 @@
+
+body {
+  background-image: url("backgroundlanding.png");
+  background-size: 40%;
+ background-repeat: repeat;}
+
+ .contenuto{
+   display: flex;
+   margin-top:20vw;
+   flex-flow: column wrap;
+   background: white;
+   align-items: center;
+
+ }
+
+ .animazione{
+   background: red;
+   width: 60vw;
+   height: 40vw;
+ }
+
+ .inizio{
+   background: green;
+   width: 50vw;
+   height: 10vw;
+ }
+
+ h1 {
+   text-align: center;
+   font-family: Druk Wide, sans-serif;
+   font-size: 2vw;
+   color: white;
+   text-decoration: none;
+
+ }
+
+ @media (min-width: 768px) {
+
+  .contenuto{
+     margin-top:8vw;
+   }
+
+   @media (min-width: 1000px) {
+    .contenuto{
+       margin-top:5vw;
+     }
+
+    @media (min-width: 1200px) {
+      .contenuto{
+         margin-top:3vw;
+       }

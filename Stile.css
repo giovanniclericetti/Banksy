@@ -1,66 +1,143 @@
-header {
+
+body {
+
+  margin: 0px;
+  }
+
+a{
+  text-decoration: none;
+}
+
+label{
+  cursor: pointer;
+  display: inline-block;
+  height: 100%;
+
+}
+
+.bar {
   background-color: red;
+  height: auto;
+  margin-top: -10px;
+  margin-bottom: 0px;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-flow: table-column;
+  column-gap: 30px;
+  align-items: center;
+  font-family: adieu;
+  color: white;
+  font-size: 15px;
+  margin: auto;
+  align-self: center;
+
+}
+
+.allahome {
+  color: white;
+  font-family: a dripping marker;
+  font-size: 35px;
+  padding-top: 6px;
+  position: relative;
+  text-align: center;
+}
+
+.headerfoto {
+  background-color: green;
   margin-top: -10px;
   margin-right: -20px;
-  margin-left: -10px;
-  margin-bottom: 4%;
+  margin-bottom: 0px;
   height: 50px;
-  position: sticky;
   width: 120%;
+  padding-left: 10px;
 }
 
-h1 {
-  color: white;
-  padding: 10px;
-  font-family: a dripping marker;
-  margin: 0;
-}
+/* colonne di immaågini */
 
-
-/* colonne di immagini */
 .colonne {
-display: flex;
-flex-flow: row nowrap;
-align-items: flex-start;
 margin-top: 10px;
+position: relative;
+column-count: 3;
+column-gap: 10px;
+padding: 10px;
+padding-top: 50px;
+
+}
+
+.magarifunziona{
+  position: relative;
+}
+
+.magarifunziona:hover img {
+  opacity: 0.5;
 }
 
 /* singola fotografia */
 .fotogalleria{
-  max-width: 100%;
-  margin-bottom: 7%;
+  margin-bottom: 10px; /* spazio sotto */
+  display: block;
+  border-radius: 5px; /* rettangoli sono smussati, possiamo anche levarlo */
+  background-color: red;
+  float: left;
+}
+/* non viene nulla, erano le divisioni in classi F
+#check1:checked ~ .bar .magarifunziona .fotogalleria {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
 }
 
-/* versione desktop */
-[class*="div-"] {
-  margin: 0.7%;
+#check2:checked ~ .bar .magarifunziona .outside {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
 }
 
-.div-1 {width: 20vw; display: inline-block;}
-.div-2 {width: 20vw; display: inline-block;}
-.div-3 {width: 20vw; display: inline-block;}
-.div-4 {width: 20vw; display: inline-block;}
-.div-5 {width: 20vw; display: inline-block;}
-.div-6 {width: 20vw; display: inline-block;}
+ #check3:checked ~ .bar .magarifunziona .product {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+}
 
-/* mobile */
-@media (max-width: 780px) {
+#check4:checked ~ .bar .magarifunziona .dimaland {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+}
 
-  [class*="div-"] {
-    margin: 0.7%;}
+#check5:checked ~ .bar .magarifunziona .hotel{
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+}
+*/
+
+img{
+  width: 100%; /* occupa tutta larghezza */
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  /* transition: 1s ease-in-out; */
+}
+
+/* .fotogalleria:hover {
+  transform: scale(1.1%);
+} */
 
 
-    .colonne {
-    display: block;
-    margin-top: 10px;
+
+
+
+/* dekstop */
+@media (min-width: 768px) {
+
+.colonne {
+      position: relative;
+      column-count: 5;
+      column-gap: 10px;
+      padding: 10px
+      padding-top: 50px;
 
     }
-
-    .div-1 {width: 31%}
-    .div-2 {width: 31%}
-    .div-3 {width: 31%}
-    .div-4 {width: 31%}
-    .div-5 {width: 31%}
-    .div-6 {width: 31%}
-
-}
