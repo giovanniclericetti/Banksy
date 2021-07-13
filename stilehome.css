@@ -1,14 +1,13 @@
 
 body {
-  background-image: url("backgroundlanding.png");
-  background-size: 40%;
- background-repeat: repeat;}
+
+ background-color: black;}
 
  .contenuto{
    display: flex;
    margin-top:20vw;
    flex-flow: column wrap;
-   background: white;
+   background: black;
    align-items: center;
 
  }
@@ -20,9 +19,12 @@ body {
  }
 
  .inizio{
-   background: green;
    width: 50vw;
    height: 10vw;
+   opacity: 0.8;
+   position: relative;
+   transition: .2s;
+   top: -150px;
  }
 
  h1 {
