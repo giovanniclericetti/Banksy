@@ -1,62 +1,177 @@
-img{
-  width: 100%; /* occupa tutta larghezza */
-  opacity: 1;
-  display: block;
-}
 
-a{
-  text-decoration: none; /*collegamenti senza decorazioni strane*/
-}
-
-body {
-  margin: 0px;
-  }
-
-h1{
-  color: #B4202E;
-  font-family: Druk Wide;
-  font-size: 2vw;
-  margin: 10px;
-}
-
-h2{
-  color:  #B4202E;
-  font-family: Druk Wide;
-  font-size: 4vw;
-  margin: 10px;
-}
-
-.color2{
-  color: #EDBDCD;
-}
-
-/* foto che si apre su nuova pagina */
-.fotoaperta{
-  opacity: 1;
-  object-fit: cover;
-  height: 100%;
-  position: absolute;
-  margin-top: 0;
+/* con font-face posso usare una font family caricata nella cartella */
+@font-face {
+   font-family: 'drukwidebold2';
+   src: url('font/drukwidebold.ttf') format('truetype');
 }
 
 .menu{
-  width: 100%;
-  z-index: 1;
-  top:20px;
-  padding-left: 30px;
-  position: fixed;
+  z-index: 1; /* per farlo stare in primo piano */
+  position: fixed; /* posizione rimane fissa */
+}
+
+.fotoaperta{
+      object-fit: cover; /* immagine rimane grande anche se la finestra si riduce */
+      height: 100%;
+      margin-top: 0;
+      position: absolute; /* posizione assoluta rispetto alla page */
+      top:0;
+      left:0;
+}
+
+.apri{
+position: absolute; /* posizione assoluta rispetto alla page */
+bottom:10px;}
+
+.apri:hover { /* funzione hover, quando il cursore è sopra */
+color: white;
+transition: 0.2s; /* accade in dissolvenza */
+}
+
+.chiudi:hover {
+color: white;
+transition: 0.2s;
+}
+
+.tornallahome:hover {
+color: white;
+transition: 0.2s;
 
 }
 
-.more{
+#bio {
+  height: 0px;
   width: 100%;
+  position: fixed; /* posizione rimane fissa */
   z-index: 1;
-  padding-bottom: 20px;
-  padding-left: 30px;
-  position: fixed;
-  bottom:0px;
+  bottom: 0;
+  left: 0;
+  background-color: blue;
+  overflow: scroll; /* tetso in più rispetto al div lo posso scrollare */
+  transition: 0.7s;
 }
 
-.fotocontainer {
-    margin-top: 0;
+/* tutti i collegamenti a non hanno la sottilineatura */
+a{
+  text-decoration: none;
+}
+
+/* stile per - + */
+h1 {
+  font-family: 'drukwidebold2';
+  color: red;
+  font-size: 40px;
+  margin-left: 40px;
+}
+
+/* stile per - + */
+h5 {
+  font-family: 'drukwidebold2';
+  color: red;
+  font-size: 40px;
+  margin-left: 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+
+/* stile per menu */
+h2 {
+  font-family: 'drukwidebold2';
+  color: red;
+  font-size: 20px;
+  text-decoration: none;
+    margin-left: 40px;
+}
+
+/* stile per titoletto nella bio */
+h3{
+  color: red;
+  font-family: drukwidebold2;
+  font-size: 25px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* stile per testo nella bio */
+h4{
+  color: red;
+  font-family: drukwidebold2;
+  font-size: 30;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+
+img {
+    width: 100%; /* permette di avere immagine grande tutta la finestra*/
+}
+
+label{
+  position: absolute;
+  z-index: 1;
+  width: 45px;
+  height: 22px;
+  right: 20px;
+  top: 20px;
+  border: 3px solid;
+  border-radius: 30px;
+  margin: 0px;
+  border-color: red;
+  cursor: pointer;
+}
+
+label.active{
+  border-color: blue;
+  }
+
+label:before{
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 17px;
+  right: 0px;
+  top: 0px;
+  border: 2px solid;
+  border-radius: 50%;
+  background-color: red;
+  transition: .2s;
+  border-color: red;
+}
+
+label.active:before {
+  right:23px;
+  background-color: blue;
+  border-color: blue;
+}
+
+body.night{
+  background: black;
+  color: white;
+}
+
+h1.night{
+  color: blue;
+}
+
+h2.night{
+  color: blue;
+}
+
+h3.night{
+  color: blue;
+}
+
+h4.night{
+  color: blue;
+}
+
+h5.night{
+  color: blue;
+}
+
+#bio.night{
+  background-color:red;
 }
