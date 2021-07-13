@@ -1,18 +1,28 @@
-
-body {
-
-  margin: 0px;
-  }
-
-a{
-  text-decoration: none;
+/* con font-face posso usare una font family caricata nella cartella */
+@font-face {
+   font-family: 'drukwidebold2';
+   src: url('font/drukwidebold.ttf') format('truetype');
 }
 
-label{
-  cursor: pointer;
-  display: inline-block;
-  height: 100%;
 
+body {
+  line-height: 1.5;
+  font-family: drukwidebold2;
+}
+
+  * {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row{
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .bar {
@@ -27,7 +37,7 @@ label{
   flex-flow: table-column;
   column-gap: 30px;
   align-items: center;
-  font-family: adieu;
+  font-family: drukwidebold2;
   color: white;
   font-size: 15px;
   margin: auto;

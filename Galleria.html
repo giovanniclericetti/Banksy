@@ -8,17 +8,9 @@
 </head>
 
 <body>
+  <!--link a css I LABEL SONO UNA PROVa
+  <section class="bar">
 
-  <!--link a css*
-<input type="radio" name="photos" id="check1" checked>
-<input type="radio" name="photos" id="check2">
-<input type="radio" name="photos" id="check3">
-<input type="radio" name="photos" id="check4">
-<input type="radio" name="photos" id="check5">
--->
-
-  <div class="bar">
-  <!--link a css I LABEL SONO UNA PROVA -->
          <label for="check2">OUTSIDE</label>
          <label for="check3">PRODUCT</label>
       <a href='index.html'>
@@ -26,9 +18,23 @@
       </a>
          <label for="check4">DISMALAND</label>
          <label for="check5">HOTEL</label>
+</div>
+-->
 
-  </div>
+<section class="bar">
 
+  <div class="container">
+    <div class="row">
+      <div class="gallery-filter">
+        <span class="filter-item active" data-filter="OUTSIDE" onclick="cambiaCategoria(this)">OUTSIDE</span>
+        <span class="filter-item" data-filter="PRODUCT" onclick="cambiaCategoria(this)">PRODUCT</span>
+        <span class="filter-item active" data-filter="ALL" onclick="cambiaCategoria(this)">ALL</span>
+        <span class="filter-item" data-filter="DISMALAND" onclick="cambiaCategoria(this)">DISMALAND</span>
+        <span class="filter-item" data-filter="HOTEL" onclick="cambiaCategoria(this)">HOTEL</span>
+      </div>
+ </div>
+
+</div>
 
   <div class="colonne">
 
@@ -39,7 +45,7 @@
     </div>
 
     <div class="magarifunziona">
-      <a href='foto2.html'>
+      <a href='bomboletta.html'>
         <img class="fotogalleria product" src="foto/product/bomboletta.jpg">
       </a>
     </div>
