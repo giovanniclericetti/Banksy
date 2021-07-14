@@ -87,7 +87,7 @@ text-decoration: none;
  }
 
  body.night{
-   background-color: white;
+   background-color: red;
  }
 
  h1.night{
@@ -100,9 +100,7 @@ text-decoration: none;
    opacity: 1;
  }
 
-#videonero.night {
 
- }
 
  @media (min-width: 768px) {
 

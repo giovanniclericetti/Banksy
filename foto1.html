@@ -10,14 +10,22 @@
 
     <label id="dark-change"> </label>
 
+    <a href="foto2.html"> <div class="avanti"> <h6> › </h6>
+    </div> </a>
+
+    <a href="foto2.html"> <div class="indietro"> <h6> ‹ </h6>
+    </div> </a>
+
   <!-- div che fa tornare alla pagina precente -->
   <div class="menu">
     <!-- a: collegamento per tornare a Galleria.html  -->
-    <a href='Galleria.html'>
+    <a href='Galleria.html' class='animazione'>
       <h2 class="tornallahome"> HOME </h2>
     </a>
 
   </div>
+
+
 
   <!-- fotoaperta: div con la fotografia che è stata scelta -->
   <div>
@@ -73,6 +81,7 @@ var apri = document.getElementsByTagName('h1')[0];
 var chiudi = document.getElementsByTagName('h5')[0];
 var titolo = document.getElementsByTagName('h3')[0];
 var testo = document.getElementsByTagName('h4')[0];
+var avantindietro = document.getElementsByTagName('h6')[0, 1];
 var darkMode = document.getElementById('dark-change');
 var bio = document.getElementById('bio');
 

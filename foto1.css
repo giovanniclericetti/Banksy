@@ -19,6 +19,37 @@
       left:0;
 }
 
+.animazione{
+  transition-property: width;
+  transition-delay: 2s;
+  transition-duration: 4s;
+  transition-timing-function: ease-out;
+}
+
+.indietro {
+  top:35%;
+  left: 50px;
+  z-index: 1;
+  position: absolute;
+}
+
+.avanti {
+  top:35%;
+  right: 50px;
+  z-index: 1;
+  position: absolute;
+}
+
+.avanti:hover h6{ /* funzione hover, quando il cursore è sopra */
+color: blue;
+transition: 0.2s; /* accade in dissolvenza */
+}
+
+.indietro:hover h6{ /* funzione hover, quando il cursore è sopra */
+color: blue;
+transition: 0.2s; /* accade in dissolvenza */
+}
+
 .apri{
 position: absolute; /* posizione assoluta rispetto alla page */
 bottom:10px;}
@@ -63,6 +94,13 @@ h1 {
   font-size: 40px;
   margin-left: 40px;
 }
+
+h6 {
+  font-family: 'drukwidebold2';
+  color: red;
+  font-size: 50px;
+}
+
 
 /* stile per - + */
 h5 {

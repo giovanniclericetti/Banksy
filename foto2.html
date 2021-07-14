@@ -2,17 +2,94 @@
 <html>
 
 <head>
-  <title>foto1</title>
+  <title>Banksito-Foto1</title>
   <link rel="stylesheet" type="text/css" href="foto1.css">
-
 </head>
 
 <body>
 
+    <label id="dark-change"> </label>
 
-  <video width="100%" height="auto" autoplay muted>
-    <source src="video.mp4" type="video/mp4">
-  </video>
+    <div class="avanti"> <h1> < </h1>
+    </div>
+
+  <!-- div che fa tornare alla pagina precente -->
+  <div class="menu">
+    <!-- a: collegamento per tornare a Galleria.html  -->
+    <a href='Galleria.html'>
+      <h2 class="tornallahome"> PAGINA NUMERO DUE </h2>
+    </a>
+
+  </div>
 
 
-  </body>
+
+  <!-- fotoaperta: div con la fotografia che è stata scelta -->
+  <div>
+    <img class="fotoaperta" src="foto/outside/foto2.jpg">
+  </div>
+
+  <!-- slide: classe con quello che si muove a tendina -->
+  <div class="slide">
+    <!-- #: per fare scorriemnto -->
+    <!-- al click si attiva la funzione -->
+    <a href="#" onclick="openSlideMenu()">
+      <h1 class="apri"> + </h1>
+    </a>
+
+  </div>
+
+  <!-- identifico id perchè serve per la function -->
+  <div id="bio" class="bio">
+    <!-- #: per fare scorriemnto -->
+    <!-- al click si attiva la funzione -->
+    <a href="#" onclick="closeSlideMenu()">
+      <h5 class="chiudi"> - </h5>
+    </a>
+
+    <!-- testi della bio, br per mandare a capo, due diversi h per due diversi pesi -->
+    <h3> Swing Girgl <br> Los Angeles </h3>
+    <h4> Located in a car park on Broadway, Downtown LA, Swing Girl is another example of Banksy making use of what was already there. The ‘ing’ portion of the parking sign have been whitewashed out to form park and a girl on a swing added to the
+      letter A. It seems clear that it is a comment on how there is a lack of places for kids to play safely in what is a fairly rough area of LA. The artwork appeared in 2010 a few days prior to the LA première of Banksy’s film Exit Through The
+      Gift Shop.
+    </h4>
+
+  </div>
+
+</body>
+
+<!-- PORZIONE JAVASCRIPT -->
+
+<script>
+
+  //getElementById permettere di identifica 'bio' e gli da nuova dimensione
+  function openSlideMenu() {
+    document.getElementById('bio').style.height = '400px';
+  }
+
+  //funzione di chiusura che permette di tornare alla situazione di partenza
+  function closeSlideMenu() {
+    document.getElementById('bio').style.height = '0px';
+  }
+
+
+var menu = document.getElementsByTagName('h2')[0];
+var apri = document.getElementsByTagName('h1')[0];
+var chiudi = document.getElementsByTagName('h5')[0];
+var titolo = document.getElementsByTagName('h3')[0];
+var testo = document.getElementsByTagName('h4')[0];
+var darkMode = document.getElementById('dark-change');
+var bio = document.getElementById('bio');
+
+darkMode.addEventListener('click', function(){
+  darkMode.classList.toggle('active');
+  titolo.classList.toggle('night');
+  apri.classList.toggle('night');
+  chiudi.classList.toggle('night');
+  testo.classList.toggle('night');
+  menu.classList.toggle('night');
+  bio.classList.toggle('night');
+})
+
+</script>
+</html>
