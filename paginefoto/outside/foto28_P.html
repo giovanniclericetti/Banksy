@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Banksito-Outside</title>
+  <link rel="stylesheet" type="text/css" href="foto28_P.css">
+  <link rel="icon" type="image/png" href="../../iconasito.png">
+</head>
+
+<body>
+
+  <label id="dark-change"> </label>
+
+  <!-- div che fa tornare alla pagina successiva -->
+  <a href="foto29_P.html">
+    <div class="avanti">
+      <h6> › </h6>
+    </div>
+  </a>
+
+  <!-- div che fa tornare alla pagina precente -->
+  <a href="foto27_P.html">
+    <div class="indietro">
+      <h6> ‹ </h6>
+    </div>
+  </a>
+
+
+  <div class="menu">
+    <!-- a: collegamento per tornare a Galleria.html  -->
+    <a href='../../Galleria.html' class='animazione'>
+      <h2 class="tornallahome"> ARTWORKS </h2>
+    </a>
+
+  </div>
+
+
+
+  <!-- fotoaperta: div con la fotografia che è stata scelta -->
+  <div>
+    <img class="fotoaperta" src="../../foto/outside/foto2.jpg">
+  </div>
+
+  <!-- slide: classe con quello che si muove a tendina -->
+  <div class="slide">
+    <!-- #: per fare scorriemnto -->
+    <!-- al click si attiva la funzione -->
+    <a href="#" onclick="openSlideMenu()">
+      <h1 class="apri"> + </h1>
+    </a>
+
+  </div>
+
+  <!-- identifico id perchè serve per la function -->
+  <div id="bio" class="bio">
+    <!-- #: per fare scorriemnto -->
+    <!-- al click si attiva la funzione -->
+    <a href="#" onclick="closeSlideMenu()">
+      <h5 class="chiudi"> - </h5>
+    </a>
+
+    <!-- testi della bio, br per mandare a capo, due diversi h per due diversi pesi -->
+    <h3> Space Girl With Bird <br> Chicago </h3>
+    <h4>
+
+      Banksy’s Space Girl With Bird was one of the pieces commissioned for Blur’s album Think Tank and appears on the cover of a free supplement cd sample given out with The Observer newspaper. The art work originally appeared on a wall in Chicago.
+    </h4>
+
+  </div>
+
+</body>
+
+<!-- PORZIONE JAVASCRIPT -->
+
+<script>
+  //getElementById permettere di identifica 'bio' e gli da nuova dimensione
+  function openSlideMenu() {
+    document.getElementById('bio').style.height = '400px';
+  }
+
+  //funzione di chiusura che permette di tornare alla situazione di partenza
+  function closeSlideMenu() {
+    document.getElementById('bio').style.height = '0px';
+  }
+
+
+  var menu = document.getElementsByTagName('h2')[0];
+  var apri = document.getElementsByTagName('h1')[0];
+  var chiudi = document.getElementsByTagName('h5')[0];
+  var titolo = document.getElementsByTagName('h3')[0];
+  var testo = document.getElementsByTagName('h4')[0];
+  var avanti = document.getElementsByTagName('h6')[1];
+  var indietro = document.getElementsByTagName('h6')[0];
+  var darkMode = document.getElementById('dark-change');
+  var bio = document.getElementById('bio');
+
+  darkMode.addEventListener('click', function() {
+    darkMode.classList.toggle('active');
+    titolo.classList.toggle('night');
+    apri.classList.toggle('night');
+    chiudi.classList.toggle('night');
+    testo.classList.toggle('night');
+    menu.classList.toggle('night');
+    bio.classList.toggle('night');
+    avanti.classList.toggle('night');
+    indietro.classList.toggle('night');
+  })
+</script>
+
+</html>

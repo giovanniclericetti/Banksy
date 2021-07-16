@@ -4,46 +4,21 @@
 <head>
   <title>BanskSito</title>
   <link rel="stylesheet" type="text/css" href="stilehome.css">
-  <link rel="icon" type="image/png" href="icon.png" >
+  <link rel="icon" type="image/png" href="iconasito.png">
 </head>
 
 <body>
 
-<label id="dark-change"> </label>
-
-
-  <div class="contenuto">
-
-
-    <a href='galleria.html' >
-      <video id="video" class='videoscelto' width="100%" height="auto" autoplay muted>
-        <source id="videonerox" class="videonero" src="videonero.mp4" type="video/mp4">
-        <source id="videobianco" src="videobianco.mp4" type="video/mp4">
+  <!-- video -->
+  <div>
+    <a href='galleria.html'>
+      <video width="100%" height="auto" autoplay muted>
+        <source src="videonero.mp4" type="video/mp4">
       </video>
-
-
-
   </div>
-
+  <!-- scritta -->
   <a href="Galleria.html" class="versogalleria">
-<h1> ARTWORKS COLLECTION </h1>
+    <h1> ARTWORKS COLLECTION </h1>
   </a>
-
-  <script>
-
-  var sfondo = document.getElementsByTagName('body')[0];
-  var h1 = document.getElementsByTagName('h1')[0];
-  var darkMode = document.getElementById('dark-change');
-  var videochiaro = document.getElementById('nerosubianco');
-
-
-  darkMode.addEventListener('click', function(){
-    darkMode.classList.toggle('active');
-    sfondo.classList.toggle('night');
-    h1.classList.toggle('night');
-    videochiaro.classList.toggle("videochiaro");
-  })
-
-  </script>
 
 </body>

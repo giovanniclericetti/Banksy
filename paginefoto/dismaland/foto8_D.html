@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Banksito-Dismaland</title>
+  <link rel="stylesheet" type="text/css" href="stile1.css">
+  <link rel="icon" type="image/png" href="../../iconasito.png">
+</head>
+
+<body>
+
+  <label id="dark-change"> </label>
+
+  <a href="foto9_D.html">
+    <div class="avanti">
+      <h6> › </h6>
+    </div>
+  </a>
+
+  <a href="foto7_D.html">
+    <div class="indietro">
+      <h6> ‹ </h6>
+    </div>
+  </a>
+
+  <!-- div che fa tornare alla pagina precente -->
+  <div class="menu">
+    <!-- a: collegamento per tornare a Galleria.html  -->
+    <a href='../../Galleria.html' class='animazione'>
+      <h2 class="tornallahome"> ARTWORKS </h2>
+    </a>
+
+  </div>
+
+  <!-- fotoaperta: div con la fotografia che è stata scelta -->
+  <div>
+    <img class="fotoaperta" id="immaginesale" src="../../foto/dismaland/mousetrap-114.jpg">
+  </div>
+
+  <!-- slide: classe con quello che si muove a tendina -->
+  <div class="slide">
+    <!-- #: per fare scorriemnto -->
+    <!-- al click si attiva la funzione -->
+    <a href="#" onclick="openSlideMenu()">
+      <h1 class="apri"> + </h1>
+    </a>
+
+  </div>
+
+  <!-- identifico id perchè serve per la function -->
+  <div id="bio" class="bio">
+    <!-- #: per fare scorriemnto -->
+    <!-- al click si attiva la funzione -->
+    <a href="#" onclick="closeSlideMenu()">
+      <h5 class="chiudi"> - </h5>
+    </a>
+
+    <!-- testi della bio, br per mandare a capo, due diversi h per due diversi pesi -->
+    <h3> Dismaland <br> Weston-Super-Mare, 2015</h3>
+    <h4> Dismaland was a temporary art project organised by street artist Banksy in the seaside resort of Weston-super-Mare in Somerset, England. Prepared in secret, the pop-up exhibition at the Tropicana, a disused lido, was "a sinister twist on Disneyland" that opened during the weekend of 21 August 2015 and closed on 27 September 2015, 36 days later. Banksy described it as a "family theme park unsuitable for children." Banksy created ten new works and funded the construction of the exhibition himself. The show featured 58 artists of the 60 Banksy originally invited to participate. 4,000 tickets were available for purchase per day, priced at £3 each. It received 150,000 visitors in the five-week period it was open. After it closed, the building material for the project was repurposed as shelters for refugees in the Calais Jungle where he also added murals.</h4>
+
+  </div>
+
+</body>
+
+<!-- PORZIONE JAVASCRIPT -->
+
+<script>
+  //getElementById permettere di identifica 'bio' e gli da nuova dimensione
+  function openSlideMenu() {
+    document.getElementById('bio').style.height = '400px';
+  }
+
+  //funzione di chiusura che permette di tornare alla situazione di partenza
+  function closeSlideMenu() {
+    document.getElementById('bio').style.height = '0px';
+  }
+
+  var menu = document.getElementsByTagName('h2')[0];
+  var apri = document.getElementsByTagName('h1')[0];
+  var chiudi = document.getElementsByTagName('h5')[0];
+  var titolo = document.getElementsByTagName('h3')[0];
+  var testo = document.getElementsByTagName('h4')[0];
+  var avanti = document.getElementsByTagName('h6')[1];
+  var indietro = document.getElementsByTagName('h6')[0];
+  var darkMode = document.getElementById('dark-change');
+  var bio = document.getElementById('bio');
+
+  darkMode.addEventListener('click', function() {
+    darkMode.classList.toggle('active');
+    titolo.classList.toggle('night');
+    apri.classList.toggle('night');
+    chiudi.classList.toggle('night');
+    testo.classList.toggle('night');
+    menu.classList.toggle('night');
+    bio.classList.toggle('night');
+    avanti.classList.toggle('night');
+    indietro.classList.toggle('night');
+  })
+</script>
+
+</html>

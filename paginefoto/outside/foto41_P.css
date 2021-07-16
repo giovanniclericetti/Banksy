@@ -1,0 +1,251 @@
+/* con font-face posso usare una font family caricata nella cartella */
+@font-face {
+  font-family: 'drukwidebold2';
+  src: url('../../font/drukwidebold.ttf') format('truetype');
+}
+
+.menu {
+  z-index: 1;
+  /* per farlo stare in primo piano */
+  position: fixed;
+  /* posizione rimane fissa */
+}
+
+.fotoaperta {
+  object-fit: cover;
+  /* immagine rimane grande anche se la finestra si riduce */
+  height: 100%;
+  margin-top: 0;
+  position: absolute;
+  /* posizione assoluta rispetto alla page */
+  top: 0;
+  left: 0;
+}
+
+.animazione {
+  transition-property: width;
+  transition-delay: 2s;
+  transition-duration: 4s;
+  transition-timing-function: ease-out;
+}
+
+.indietro {
+  top: 45%;
+  left: 50px;
+  z-index: 1;
+  position: absolute;
+}
+
+.avanti {
+  top: 45%;
+  right: 50px;
+  z-index: 1;
+  position: absolute;
+}
+
+.apri {
+  position: absolute;
+  /* posizione assoluta rispetto alla page */
+  bottom: 10px;
+}
+
+.chiudi:hover {
+  color: white;
+  transition: 0.2s;
+}
+
+h6:hover {
+  color: #5d297d;
+  transition: 0.2s;
+}
+
+.apri:hover {
+  /* funzione hover, quando il cursore è sopra */
+  color: #5d297d;
+  transition: 0.2s;
+  /* accade in dissolvenza */
+}
+
+.tornallahome:hover {
+  color: #5d297d;
+  transition: 0.2s;
+}
+
+h6.night:hover {
+  color: #c10017;
+  transition: 0.2s;
+}
+
+.avanti.night:hover {
+  /* funzione hover, quando il cursore è sopra */
+  color: #c10017;
+  transition: 0.2s;
+  /* accade in dissolvenza */
+}
+
+.indietro.night:hover h6 {
+  /* funzione hover, quando il cursore è sopra */
+  color: #c10017;
+  transition: 0.2s;
+  /* accade in dissolvenza */
+}
+
+.apri.night:hover {
+  color: #c10017;
+}
+
+.tornallahome.night:hover {
+  color: #c10017;
+  transition: 0.2s;
+}
+
+#bio {
+  height: 0px;
+  width: 100%;
+  position: fixed;
+  /* posizione rimane fissa */
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  background-color: #5d297d;
+  overflow: scroll;
+  /* tetso in più rispetto al div lo posso scrollare */
+  transition: 0.7s;
+}
+
+/* tutti i collegamenti a non hanno la sottilineatura */
+a {
+  text-decoration: none;
+}
+
+/* stile per - + */
+h1 {
+  font-family: 'drukwidebold2';
+  color: #c10017;
+  font-size: 40px;
+  margin-left: 40px;
+}
+
+h6 {
+  font-family: 'drukwidebold2';
+  color: #c10017;
+  font-size: 50px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* stile per - + */
+h5 {
+  font-family: 'drukwidebold2';
+  color: #c10017;
+  font-size: 40px;
+  margin-left: 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* stile per menu */
+h2 {
+  font-family: 'drukwidebold2';
+  color: #c10017;
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+/* stile per titoletto nella bio */
+h3 {
+  color: #c10017;
+  font-family: drukwidebold2;
+  font-size: 25px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* stile per testo nella bio */
+h4 {
+  color: #c10017;
+  font-family: drukwidebold2;
+  font-size: 30;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+
+img {
+  width: 100%;
+  /* permette di avere immagine grande tutta la finestra*/
+}
+
+label {
+  position: absolute;
+  z-index: 1;
+  width: 45px;
+  height: 22px;
+  right: 40px;
+  top: 25px;
+  border: 2px solid;
+  border-radius: 30px;
+  margin: 0px;
+  border-color: #c10017;
+  cursor: pointer;
+}
+
+label.active {
+  border-color: #5d297d;
+}
+
+label:before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  right: 1px;
+  top: 1px;
+  border: 2px solid;
+  border-radius: 50%;
+  background-color: #c10017;
+  transition: .2s;
+  border-color: #c10017;
+}
+
+label.active:before {
+  right: 24px;
+  background-color: #5d297d;
+  border-color: #5d297d;
+}
+
+body.night {
+  background: black;
+  color: white;
+}
+
+h1.night {
+  color: #5d297d;
+}
+
+h2.night {
+  color: #5d297d;
+}
+
+h3.night {
+  color: #5d297d;
+}
+
+h4.night {
+  color: #5d297d;
+}
+
+h5.night {
+  color: #5d297d;
+}
+
+h6.night {
+  color: #5d297d;
+}
+
+#bio.night {
+  background-color: #c10017;
+}

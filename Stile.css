@@ -1,153 +1,175 @@
 /* con font-face posso usare una font family caricata nella cartella */
 @font-face {
-   font-family: 'drukwidebold2';
-   src: url('font/drukwidebold.ttf') format('truetype');
+  font-family: 'drukwidebold2';
+  src: url('font/drukwidebold.ttf') format('truetype');
 }
-
 
 body {
-  line-height: 1.5;
-  font-family: drukwidebold2;
+  background-color: black;
 }
 
-  * {
+body.night {
+  background-color: #275DAD;
+}
+
+label {
+  position: absolute;
+  width: 45px;
+  height: 22px;
+  right: 40px;
+  top: 50px;
+  border: 2px solid;
+  border-radius: 30px;
+  margin: 0px;
+  border-color: white;
+  cursor: pointer;
+}
+
+label:before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  right: 1px;
+  top: 1px;
+  border: 2px solid;
+  border-radius: 50%;
+  background-color: white;
+  transition: .2s;
+  border-color: white;
+}
+
+label.active:before {
+  right: 24px;
+  background-color: white;
+  border-color: white;
+}
+
+body {
+  font-family: drukwidebold2;
   margin: 0;
   box-sizing: border-box;
 }
 
-.container{
-  max-width: 1170px;
-  margin: auto;
-}
-
-.row{
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.bar {
-  background-color: red;
-  height: auto;
-  margin-top: -10px;
-  margin-bottom: 0px;
-  width: 100%;
-  z-index: 1;
-  position: absolute;
-  display: flex;
-  flex-flow: table-column;
-  column-gap: 30px;
-  align-items: center;
-  font-family: drukwidebold2;
-  color: white;
-  font-size: 15px;
-  margin: auto;
-  align-self: center;
-
-}
-
 .allahome {
-  color: white;
-  font-family: a dripping marker;
-  font-size: 35px;
-  padding-top: 6px;
-  position: relative;
+  height: 30px;
+  width: 30px;
+  margin-left: 40px;
+  opacity: .5;
+  top: 47px;
+  position: absolute;
+}
+
+.cambiostile {
+  opacity: .5;
+}
+
+.cambiostile:hover {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.allahome:hover {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+/*barra menù*/
+.gallery .gallery-filter {
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.headerfoto {
-  background-color: green;
-  margin-top: -10px;
-  margin-right: -20px;
-  margin-bottom: 0px;
-  height: 50px;
-  width: 120%;
-  padding-left: 10px;
-}
-
-/* colonne di immaågini */
-
-.colonne {
-margin-top: 10px;
-position: relative;
-column-count: 3;
-column-gap: 10px;
-padding: 10px;
-padding-top: 50px;
-
-}
-
-.magarifunziona{
-  position: relative;
-}
-
-.magarifunziona:hover img {
+/*testo menù*/
+.gallery .gallery-filter .filter-item {
+  color: white;
+  font-size: 10px;
+  padding: 3px;
+  text-transform: uppercase;
+  display: block;
+  margin: 0px;
+  cursor: pointer;
   opacity: 0.5;
 }
 
-/* singola fotografia */
-.fotogalleria{
-  margin-bottom: 10px; /* spazio sotto */
-  display: block;
-  border-radius: 5px; /* rettangoli sono smussati, possiamo anche levarlo */
-  background-color: red;
-  float: left;
-}
-/* non viene nulla, erano le divisioni in classi F
-#check1:checked ~ .bar .magarifunziona .fotogalleria {
+/*colore e hover testo menù*/
+.gallery .gallery-filter .filter-item:hover {
   opacity: 1;
-  transform: scale(1);
-  position: relative;
+  transition: 0.2s;
 }
 
-#check2:checked ~ .bar .magarifunziona .outside {
+/*hover e sottolineatura cartella corrente testo menù*/
+.gallery .gallery-filter .filter-item.active {
   opacity: 1;
-  transform: scale(1);
-  position: relative;
 }
 
- #check3:checked ~ .bar .magarifunziona .product {
-  opacity: 1;
-  transform: scale(1);
-  position: relative;
+/*aspetto barra*/
+.row {
+  height: 115px;
+  color: white;
 }
 
-#check4:checked ~ .bar .magarifunziona .dimaland {
-  opacity: 1;
-  transform: scale(1);
-  position: relative;
-}
-
-#check5:checked ~ .bar .magarifunziona .hotel{
-  opacity: 1;
-  transform: scale(1);
-  position: relative;
-}
-*/
-
-img{
-  width: 100%; /* occupa tutta larghezza */
-  opacity: 1;
-  display: block;
-  transition: .5s ease;
-  /* transition: 1s ease-in-out; */
-}
-
-/* .fotogalleria:hover {
-  transform: scale(1.1%);
-} */
-
-
-
-
-
-/* dekstop */
-@media (min-width: 768px) {
-
+/* colonne di immaågini */
 .colonne {
-      position: relative;
-      column-count: 5;
-      column-gap: 10px;
-      padding: 10px
-      padding-top: 50px;
+  column-count: 3;
+  column-gap: 10px;
+  padding: 10px;
+  padding-top: 0px;
+}
 
-    }
+/* hover delle immagini */
+.gallery-item:hover img {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+/* singola fotografia */
+.fotogalleria {
+  margin-bottom: 10px;
+  /* spazio sotto */
+  border-radius: 5px;
+  /* rettangoli sono smussati */
+}
+
+img {
+  width: 100%;
+  /* occupa tutta larghezza */
+}
+
+/* animazione filtri galleria */
+.gallery .gallery-item.hide {
+  display: none;
+}
+
+/* versione deckstop */
+@media (min-width: 850px) {
+  .colonne {
+    position: relative;
+    column-count: 5;
+    column-gap: 10px;
+    padding: 20px;
+    padding: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .gallery .gallery-filter .filter-item {
+    font-size: 15px;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .allahome {
+    top: 17px;
+  }
+
+  .row {
+    height: 50px;
+  }
+
+  label {
+    top: 20px;
+  }
+}

@@ -1,0 +1,245 @@
+/* con font-face posso usare una font family caricata nella cartella */
+@font-face {
+  font-family: 'drukwidebold2';
+  src: url('../../font/drukwidebold.ttf') format('truetype');
+}
+
+.menu {
+  z-index: 1;
+  /* per farlo stare in primo piano */
+  position: fixed;
+  /* posizione rimane fissa */
+}
+
+.fotoaperta {
+  object-fit: contain;
+  /* immagine rimane grande anche se la finestra si riduce */
+  height: 100%;
+  margin-top: 0;
+  position: absolute;
+  /* posizione assoluta rispetto alla page */
+  top: 0;
+  left: 0;
+}
+
+.indietro {
+  top: 45%;
+  left: 50px;
+  z-index: 1;
+  position: absolute;
+}
+
+.avanti {
+  top: 45%;
+  right: 50px;
+  z-index: 1;
+  position: absolute;
+}
+
+.apri {
+  position: absolute;
+  /* posizione assoluta rispetto alla page */
+  bottom: 10px;
+}
+
+.chiudi:hover {
+  color: white;
+  transition: 0.2s;
+}
+
+h6:hover {
+  color: #f57d35;
+  transition: 0.2s;
+}
+
+.apri:hover {
+  /* funzione hover, quando il cursore è sopra */
+  color: #f57d35;
+  transition: 0.2s;
+  /* accade in dissolvenza */
+}
+
+.tornallahome:hover {
+  color: #f57d35;
+  transition: 0.2s;
+}
+
+h6.night:hover {
+  color: #2991b8;
+  transition: 0.2s;
+}
+
+.avanti.night:hover {
+  /* funzione hover, quando il cursore è sopra */
+  color: #2991b8;
+  transition: 0.2s;
+  /* accade in dissolvenza */
+}
+
+.indietro.night:hover h6 {
+  /* funzione hover, quando il cursore è sopra */
+  color: #2991b8;
+  transition: 0.2s;
+  /* accade in dissolvenza */
+}
+
+.apri.night:hover {
+  color: #2991b8;
+}
+
+.tornallahome.night:hover {
+  color: #2991b8;
+  transition: 0.2s;
+}
+
+#bio {
+  height: 0px;
+  width: 100%;
+  position: fixed;
+  /* posizione rimane fissa */
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  background-color: #f57d35;
+  overflow: scroll;
+  /* tetso in più rispetto al div lo posso scrollare */
+  transition: 0.7s;
+}
+
+/* tutti i collegamenti a non hanno la sottilineatura */
+a {
+  text-decoration: none;
+}
+
+/* stile per - + */
+h1 {
+  font-family: 'drukwidebold2';
+  color: #2991b8;
+  font-size: 40px;
+  margin-left: 40px;
+}
+
+h6 {
+  font-family: 'drukwidebold2';
+  color: #2991b8;
+  font-size: 50px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* stile per - + */
+h5 {
+  font-family: 'drukwidebold2';
+  color: #2991b8;
+  font-size: 40px;
+  margin-left: 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* stile per menu */
+h2 {
+  font-family: 'drukwidebold2';
+  color: #2991b8;
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+/* stile per titoletto nella bio */
+h3 {
+  color: #2991b8;
+  font-family: drukwidebold2;
+  font-size: 25px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* stile per testo nella bio */
+h4 {
+  color: #2991b8;
+  font-family: drukwidebold2;
+  font-size: 30;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+
+img {
+  width: 100%;
+  /* permette di avere immagine grande tutta la finestra*/
+}
+
+label {
+  position: absolute;
+  z-index: 1;
+  width: 45px;
+  height: 22px;
+  right: 40px;
+  top: 25px;
+  border: 2px solid;
+  border-radius: 30px;
+  margin: 0px;
+  border-color: #2991b8;
+  cursor: pointer;
+}
+
+label.active {
+  border-color: #f57d35;
+}
+
+label:before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  right: 1px;
+  top: 1px;
+  border: 2px solid;
+  border-radius: 50%;
+  background-color: #2991b8;
+  transition: .2s;
+  border-color: #2991b8;
+}
+
+label.active:before {
+  right: 24px;
+  background-color: #f57d35;
+  border-color: #f57d35;
+}
+
+body.night {
+  background: black;
+  color: #2991b8;
+}
+
+h1.night {
+  color: #f57d35;
+}
+
+h2.night {
+  color: #f57d35;
+}
+
+h3.night {
+  color: #f57d35;
+}
+
+h4.night {
+  color: #f57d35;
+}
+
+h5.night {
+  color: #f57d35;
+}
+
+h6.night {
+  color: #f57d35;
+}
+
+#bio.night {
+  background-color: #2991b8;
+}
+}
